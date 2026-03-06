@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #2f1946);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 340px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 8px;
+  animation: float 3s ease-in-out infinite;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.school-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+  margin: 10px 0;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #00c9a7;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00a98a;
+  transform: scale(1.05);
+}
