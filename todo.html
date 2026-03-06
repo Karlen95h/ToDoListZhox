@@ -18,11 +18,22 @@
     </div>
 
     <!-- Todo List Input -->
-    <div class="add-task">
-      <input type="text" id="task-input" placeholder="Գրեք հանձնարարությունը">
-      <input type="datetime-local" id="task-deadline">
-      <button id="add-btn">Ավելացնել</button>
-    </div>
+<div class="add-task">
+
+  <input type="text" id="task-input" placeholder="Գրեք հանձնարարությունը">
+
+  <select id="task-subject">
+    <option value="math">Math</option>
+    <option value="physics">Physics</option>
+    <option value="it">IT</option>
+  </select>
+
+  <input type="datetime-local" id="task-deadline">
+
+  <button id="add-btn">Ավելացնել</button>
+
+</div>
+
 
     <!-- Todo List ցուցակ -->
     <ul id="task-list">

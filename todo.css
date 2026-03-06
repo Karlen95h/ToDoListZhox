@@ -118,3 +118,21 @@ body {
   background: #e04343;
   transform: scale(1.1);
 }
+
+
+.math {
+  border-left: 6px solid #ff7675;
+}
+
+.physics {
+  border-left: 6px solid #74b9ff;
+}
+
+.it {
+  border-left: 6px solid #55efc4;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
