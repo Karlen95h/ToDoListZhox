@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Dashboard</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Վերևի հենարան՝ դպրոցի անուն և աշակերտի անունը -->
+    <div class="header">
+      <img src="img/logo.png" class="logo" alt="Դպրոցի լոգո">
+      <div class="school-name">Գյումրու Տնտեսագիտական Վարժարան</div>
+      <div class="student-name">Բարև, <span id="student-name"></span>!</div>
+    </div>
+
+    <!-- Todo List Input -->
+    <div class="add-task">
+      <input type="text" id="task-input" placeholder="Գրեք հանձնարարությունը">
+      <input type="datetime-local" id="task-deadline">
+      <button id="add-btn">Ավելացնել</button>
+    </div>
+
+    <!-- Todo List ցուցակ -->
+    <ul id="task-list">
+      <!-- Todo-ները կցուցադրվեն այստեղ -->
+    </ul>
+
+  </div>
+
+  <!-- JS ֆայլը Todo-ի լոգիկայի համար -->
+  <script src="script.js"></script>
+</body>
+</html>
