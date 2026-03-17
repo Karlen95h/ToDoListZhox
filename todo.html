@@ -4,45 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo List Dashboard</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="todo.css">
 </head>
+
 <body>
 
   <div class="container">
 
-    <!-- Վերևի հենարան՝ դպրոցի անուն և աշակերտի անունը -->
     <div class="header">
-      <img src="img/logo.png" class="logo" alt="Դպրոցի լոգո">
+      <img src="img/logo.png" class="logo">
       <div class="school-name">Գյումրու Տնտեսագիտական Վարժարան</div>
-      <div class="student-name">Բարև, <span id="student-name"></span>!</div>
+      <div class="student-name">Բարև, <span id="student-name">Ուսանող</span>!</div>
     </div>
 
-    <!-- Todo List Input -->
-<div class="add-task">
+    <div class="add-task">
 
-  <input type="text" id="task-input" placeholder="Գրեք հանձնարարությունը">
+      <input type="text" id="task-input" placeholder="Գրեք հանձնարարությունը">
 
-  <select id="task-subject">
-    <option value="math">Math</option>
-    <option value="physics">Physics</option>
-    <option value="it">IT</option>
-  </select>
+      <!-- Հոսքեր -->
+      <select id="task-subject">
+        <option value="">Ընտրեք հոսքը</option>
+        <option value="economics">Տնտեսագիտական հոսք</option>
+        <option value="humanities">Հումանիտար հոսք</option>
+        <option value="science">Բնագիտական հոսք</option>
+        <option value="ai">Արհեստական բանականություն</option>
+        <option value="physmath">Ֆիզմաթ հոսք</option>
+      </select>
 
-  <input type="datetime-local" id="task-deadline">
+      <!-- Առարկաներ -->
+      <select id="task-course">
+        <option value="">Ընտրեք առարկան</option>
+      </select>
 
-  <button id="add-btn">Ավելացնել</button>
+      <input type="datetime-local" id="task-deadline">
 
-</div>
+      <button id="add-btn">Ավելացնել</button>
 
+    </div>
 
-    <!-- Todo List ցուցակ -->
-    <ul id="task-list">
-      <!-- Todo-ները կցուցադրվեն այստեղ -->
-    </ul>
+    <ul id="task-list"></ul>
 
   </div>
 
-  <!-- JS ֆայլը Todo-ի լոգիկայի համար -->
   <script src="script.js"></script>
+
 </body>
 </html>

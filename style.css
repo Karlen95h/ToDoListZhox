@@ -7,15 +7,15 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #667eea, #2f1946);
+  background: linear-gradient(135deg, #0d805e, #ffffff);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .container {
-  width: 340px;
-  padding: 25px;
+  width: 600px;
+  height: 550px;
+  padding: 87px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);

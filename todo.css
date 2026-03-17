@@ -19,7 +19,7 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Header-ի ոճերը */
+/* Header */
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -47,13 +47,11 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  margin-bottom: 5px;
 }
 
 .student-name {
   font-size: 16px;
   color: white;
-  font-weight: 500;
 }
 
 /* Todo Input Block */
@@ -64,7 +62,11 @@ body {
   margin-bottom: 15px;
 }
 
-#task-input, #task-deadline {
+/* 🔥 Input + Select նույն ոճով */
+#task-input,
+#task-deadline,
+#task-subject,
+#task-course {
   padding: 10px;
   border-radius: 8px;
   border: none;
@@ -72,6 +74,7 @@ body {
   font-size: 14px;
 }
 
+/* Button */
 #add-btn {
   padding: 10px;
   border: none;
@@ -88,7 +91,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Todo List Items */
+/* Todo List */
 #task-list {
   list-style: none;
   padding: 0;
@@ -119,19 +122,34 @@ body {
   transform: scale(1.1);
 }
 
+/* 🔥 ՆՈՐ ՀՈՍՔԵՐԻ ԳՈՒՅՆԵՐ */
 
-.math {
-  border-left: 6px solid #ff7675;
+/* Տնտեսագիտական */
+.economics {
+  border-left: 6px solid #f39c12;
 }
 
-.physics {
-  border-left: 6px solid #74b9ff;
+/* Հումանիտար */
+.humanities {
+  border-left: 6px solid #9b59b6;
 }
 
-.it {
-  border-left: 6px solid #55efc4;
+/* Բնագիտական */
+.science {
+  border-left: 6px solid #27ae60;
 }
 
+/* Ֆիզմաթ */
+.physmath {
+  border-left: 6px solid #2980b9;
+}
+
+/* Արհեստական բանականություն */
+.ai {
+  border-left: 6px solid #e84393;
+}
+
+/* Ավարտված task */
 .completed {
   text-decoration: line-through;
   opacity: 0.6;
