@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List Dashboard</title>
+  <title>Todo Dashboard</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="todo.css">
 </head>
 
@@ -13,27 +12,34 @@
 
   <div class="container">
 
+    <!-- HEADER -->
     <div class="header">
       <img src="img/logo.png" class="logo">
       <div class="school-name">Գյումրու Տնտեսագիտական Վարժարան</div>
-      <div class="student-name">Բարև, <span id="student-name">Ուսանող</span>!</div>
+      <div class="student-name">Բարև, <span id="student-name">Ուսանող</span> 👋</div>
     </div>
 
+    <!-- 🔥 STATS BLOCK -->
+    <div class="stats">
+      <div class="card">📊 Ընդհանուր <span id="total">0</span></div>
+      <div class="card">✅ Ավարտված <span id="done">0</span></div>
+      <div class="card">⏳ Մնացած <span id="pending">0</span></div>
+    </div>
+
+    <!-- ADD TASK -->
     <div class="add-task">
 
       <input type="text" id="task-input" placeholder="Գրեք հանձնարարությունը">
 
-      <!-- Հոսքեր -->
       <select id="task-subject">
         <option value="">Ընտրեք հոսքը</option>
-        <option value="economics">Տնտեսագիտական հոսք</option>
-        <option value="humanities">Հումանիտար հոսք</option>
-        <option value="science">Բնագիտական հոսք</option>
-        <option value="ai">Արհեստական բանականություն</option>
-        <option value="physmath">Ֆիզմաթ հոսք</option>
+        <option value="economics">Տնտեսագիտական</option>
+        <option value="humanities">Հումանիտար</option>
+        <option value="science">Բնագիտական</option>
+        <option value="ai">ԱԲ</option>
+        <option value="physmath">Ֆիզմաթ</option>
       </select>
 
-      <!-- Առարկաներ -->
       <select id="task-course">
         <option value="">Ընտրեք առարկան</option>
       </select>
@@ -44,6 +50,7 @@
 
     </div>
 
+    <!-- TASK LIST -->
     <ul id="task-list"></ul>
 
   </div>

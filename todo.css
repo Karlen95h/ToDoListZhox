@@ -1,4 +1,3 @@
-/* Հիմնական ոճերը container-ի համար */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,151 +5,194 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #0d805e, #ffffff);
+
 }
 
 .container {
-  width: 400px;
-  margin-top: 40px;
-  padding: 25px;
+  width: 420px;
+  margin-top: 30px;
+  padding: 20px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* Header */
+/* HEADER */
 .header {
   text-align: center;
-  margin-bottom: 20px;
+  color: white;
 }
 
 .logo {
-  width: 80px;
-  border-radius: 50%;
+  width: 70px;
   margin-bottom: 5px;
-  animation: float 3s ease-in-out infinite;
-  transition: 0.3s;
+
+  animation: float 4s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+
+  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 50%;
+
 }
 
+/* Hover */
 .logo:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.15) rotate(8deg);
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.9));
 }
 
+/* Float animation */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-12px); }
   100% { transform: translateY(0px); }
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.8));
+  }
 }
 
 .school-name {
   font-size: 18px;
   font-weight: bold;
-  color: white;
 }
 
 .student-name {
-  font-size: 16px;
-  color: white;
+  font-size: 15px;
 }
 
-/* Todo Input Block */
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  background: rgba(255,255,255,0.25);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* INPUT */
 .add-task {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 15px;
 }
 
-/* 🔥 Input + Select նույն ոճով */
-#task-input,
-#task-deadline,
-#task-subject,
-#task-course {
+input, select {
   padding: 10px;
   border-radius: 8px;
   border: none;
   outline: none;
-  font-size: 14px;
 }
 
-/* Button */
-#add-btn {
+/* BUTTON */
+button {
   padding: 10px;
   border: none;
   border-radius: 8px;
   background: #00c9a7;
   color: white;
-  font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#add-btn:hover {
+button:hover {
   background: #00a98a;
   transform: scale(1.05);
 }
 
-/* Todo List */
+/* TASK LIST */
 #task-list {
   list-style: none;
   padding: 0;
 }
 
 #task-list li {
-  padding: 10px;
-  margin-bottom: 8px;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
 }
 
-#task-list li button {
+#task-list li:hover {
+  transform: scale(1.02);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
   background: #ff5c5c;
   border: none;
   padding: 5px 8px;
   border-radius: 6px;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-#task-list li button:hover {
+.delete-btn:hover {
   background: #e04343;
   transform: scale(1.1);
 }
 
-/* 🔥 ՆՈՐ ՀՈՍՔԵՐԻ ԳՈՒՅՆԵՐ */
+/* SUBJECT COLORS */
+.economics { border-left: 5px solid orange; }
+.humanities { border-left: 5px solid purple; }
+.science { border-left: 5px solid green; }
+.ai { border-left: 5px solid pink; }
+.physmath { border-left: 5px solid blue; }
 
-/* Տնտեսագիտական */
-.economics {
-  border-left: 6px solid #f39c12;
-}
-
-/* Հումանիտար */
-.humanities {
-  border-left: 6px solid #9b59b6;
-}
-
-/* Բնագիտական */
-.science {
-  border-left: 6px solid #27ae60;
-}
-
-/* Ֆիզմաթ */
-.physmath {
-  border-left: 6px solid #2980b9;
-}
-
-/* Արհեստական բանականություն */
-.ai {
-  border-left: 6px solid #e84393;
-}
-
-/* Ավարտված task */
+/* COMPLETED */
 .completed {
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+/* DEADLINE */
+.overdue {
+  border: 2px solid red;
+}
+
+/* 📖 BOOK BUTTON */
+.book-btn {
+  margin-top: 5px;
+  background: linear-gradient(135deg, #0984e3, #6c5ce7);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #0652dd, #4834d4);
+}
+
+.book-btn:active {
+  transform: scale(0.95);
 }
